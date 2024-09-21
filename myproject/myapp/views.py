@@ -36,33 +36,78 @@ def event1(request):
     
 
 def event2(request):
+    request.session['event'] = 'cricket'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
     return render(request, 'myapp/event2.html')
 
 def event3(request):
-    # Check if the user requested to download the Excel file
-    if 'export' in request.GET:
-        # Query the data from the model
-        students = Student.objects.all().values('first_name', 'last_name', 'email', 'prn', 'department')
-
-        # Convert the QuerySet to a DataFrame
-        df = pd.DataFrame(list(students))
-
-        # Rename columns (optional)
-        df.columns = ['First Name', 'Last Name', 'Email', 'PRN', 'Department']
-
-        # Create an HTTP response with the Excel content type
-        response = HttpResponse(content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-        response['Content-Disposition'] = 'attachment; filename=students.xlsx'
-
-        # Write the DataFrame to the response as an Excel file
-        df.to_excel(response, index=False, engine='openpyxl')
-
-        return response
+    request.session['event'] = 'basketball'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
     
-    # If 'export' is not in the query params, render the normal page
+    # Render the event1 page with the login form
     return render(request, 'myapp/event3.html')
 
 def event4(request):
+    request.session['event'] = 'chess'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
     return render(request, 'myapp/event4.html')
 
 def register(request):

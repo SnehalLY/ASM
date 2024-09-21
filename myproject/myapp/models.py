@@ -1,4 +1,3 @@
-# models.py
 from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
 
@@ -20,8 +19,8 @@ class Student(models.Model):
     first_name = models.CharField(max_length=100)
     middle_name = models.CharField(max_length=100, blank=True, null=True)  # Optional field
     last_name = models.CharField(max_length=100)
-    prn = models.CharField(max_length=20, unique=True)
-    email = models.EmailField(unique=True)
+    prn = models.CharField(max_length=20)  # Temporarily remove unique constraint
+    email = models.EmailField()  # Temporarily remove unique constraint
     year = models.CharField(max_length=10, choices=[
         ('2nd', 'SY'),
         ('3rd', 'TY'),
@@ -32,7 +31,7 @@ class Student(models.Model):
         ('IT', 'IT'),
         ('Mechanical', 'Mechanical'),
     ])
-    roll_number = models.CharField(max_length=20, unique=True)
+    roll_number = models.CharField(max_length=20)  # Temporarily remove unique constraint
     mobile_number = models.CharField(max_length=15)
 
     def __str__(self):

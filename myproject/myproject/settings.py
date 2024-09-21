@@ -54,6 +54,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 ROOT_URLCONF = 'myproject.urls'
 
 TEMPLATES = [
@@ -125,10 +128,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Where static files will be collected for production
 
 # Optional: if you want to collect static files in a single directory
 STATICFILES_DIRS = [
     BASE_DIR / 'myapp/static',  # This should match the location where you just created the static folder
+    
 ]
 
 

@@ -26,7 +26,8 @@
         </div>
         <div class="login-form">
             <h2>Student Login</h2>
-            <form action="#" method="POST">
+            <form action="{% url 'event4' %}" method="POST">
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>

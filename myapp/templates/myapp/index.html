@@ -33,34 +33,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Computer</td>
-                    <td>150</td>
-                </tr>
-                <tr>
-                    <td>IT</td>
-                    <td>140</td>
-                </tr>
-                <tr>
-                    <td>EnTC</td>
-                    <td>130</td>
-                </tr>
-                <tr>
-                    <td>Mechanical</td>
-                    <td>120</td>
-                </tr>
-                <tr>
-                    <td>Civil</td>
-                    <td>120</td>
-                </tr>
-                <tr>
-                    <td>CSE(AI) & CSE(IoT)</td>
-                    <td>120</td>
-                </tr>
-                <tr>
-                    <td>CSE(AI&ML) & CSE(SE) &CSE(DS)</td>
-                    <td>120</td>
-                </tr>
+                {% for department in departments %}
+                    <tr>
+                        <td>{{ department.dept_name }}</td> <!-- Use dept_name from Department -->
+                        <td>{{ department.score }}</td>
+                    </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>

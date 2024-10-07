@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1 - Game Rules</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %}" alt="Left Logo" id="headerim1">
+        <div class="college-info">
+            <div class="managing-society">Bansilal Ramnath Agarwal Charitable Trust's</div>
+            <div class="college-name">Vishwakarma Institute Of Information Technology, Pune</div>
+            <div class="university-affiliation">(An Autonomous Institute affiliated to Savitribai Phule Pune University)</div>
+        </div>
+        <img src="{% static 'myapp/images/sports-club-logo.png' %}" alt="Right Logo" id="headerim2">
+    </div>
+
+    <div class="game-name">
+        <h1><B>FOOTBALL</B></h>
+    </div>
+
+    <!-- Main Event Section -->
+    <div class="event1-section">
+        <div class="game-rules">
+            <h2>Game Rules</h2>
+            <ul class="rules-list">
+                    <li>1: Tournament Format: The tournament will have 8 teams, and each match will be knockout style.</li>
+                    <li>2: General Rules: Each team can have up to 6 players on the field.</li>
+                    <li> • Teams can have up to 3 substitutes, and rolling substitutions are allowed.</li>
+                    <li> • The referee's decision is final.</li>
+                    <li>3: Match Duration: Matches will consist of two 12-minute halves, except for the final, which will have two 15-minute halves.
+                    <li> • There will be a 3-minute half-time break.
+                    <li> • If a match is tied, including the semi-finals, it will go to a best-of-3 penalty shootout.
+                    <li> • If the best-of-3 shootout ends in a tie, the match will go to sudden death, meaning one penalty each until one team misses.
+                    <li> • If the final is tied, there will be two 5-minute halves of extra time, followed by a best-of-3 penalty shootout if necessary.
+                    <li> • Any delay by the teams will result in a reduction of match time.
+                    <li>4: Player Conduct: A player receiving a yellow card must sit out for 2 minutes. </li> 
+                    <li> • A player receiving a red card is ejected and cannot be replaced, leaving the team with one less player. </li> 
+                    <li> • Abusive language, violence, or unsportsmanlike behavior may result in disciplinary action. </li>  
+                    <li> • Fouls will result in a free-kick or a penalty kick if committed in the penalty area. </li> 
+                    <li>5: Goalkeeper Rules: Goalkeepers can use their hands only inside the penalty area. </li> 
+                    <li> • Goal kicks and throws must be taken from the goalkeeper's box. </li> 
+                    <li>6: Throw-ins: Throw-ins must be taken from the ground. </li> 
+                    <li>7: Dispute Resolution: Any disputes must be reported in writing to the organizers within 30 minutes after the match. </li> 
+                    <li>8: Team Attire: Players must wear proper sports attire, including shin guards, and teams should have matching kits or bibs. </li> 
+                    <li> • Referees will officiate each match, and their decisions are final. </li>                  
+            </ul>
+        </div>
+        <div class="login-form">
+            <h2>Student Login</h2>
+            <form action="{% url 'event1' %}" method="POST">
+              {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-container">
+                    <button>Login</button>
+                </div>                
+            </form>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    <form action="{% url 'view_draws' %}" method="GET">
+      <button type="submit">View Draws</button>
+  </form>
+      <h1><B>FOOTBALL WINNERS (W)</B></h>
+    <div class="podium">
+        <div id="secondPlace" class="second-place podium-item">
+          <span id="secondRank" class="rank">2</span>
+          <div id="secondDepartment" class="department">
+            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+          </div>
+          <div class="medal silver-medal"></div>
+        </div>
+        <div id="firstPlace" class="first-place podium-item">
+          <span id="firstRank" class="rank">1</span>
+          <div id="firstDepartment" class="department">
+            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+          </div>
+          <div class="medal gold-medal"></div>
+        </div>
+        <div id="thirdPlace" class="third-place podium-item">
+          <span id="thirdRank" class="rank">3</span>
+          <div id="thirdDepartment" class="department">
+            <div id="thirdDept1" class="dept">MECH</div>
+          </div>
+          <div class="medal bronze-medal"></div>
+        </div>
+      </div>
+      <h1><B>FOOTBALL WINNERS (M)</B></h>
+          <div class="podium">
+            <div id="secondPlace" class="second-place podium-item">
+              <span id="secondRank" class="rank">2</span>
+              <div id="secondDepartment" class="department">
+                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+              </div>
+              <div class="medal silver-medal"></div>
+            </div>
+            <div id="firstPlace" class="first-place podium-item">
+              <span id="firstRank" class="rank">1</span>
+              <div id="firstDepartment" class="department">
+                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+              </div>
+              <div class="medal gold-medal"></div>
+            </div>
+            <div id="thirdPlace" class="third-place podium-item">
+              <span id="thirdRank" class="rank">3</span>
+              <div id="thirdDepartment" class="department">
+                <div id="thirdDept1" class="dept">MECH</div>
+              </div>
+              <div class="medal bronze-medal"></div>
+            </div>
+          </div>
+          
+      
+    <!-- Add more dots for more frequent floating effect -->
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    </div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+        
+
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot">
+       
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</body>
+</html>

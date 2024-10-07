@@ -1,33 +1,13 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, serif;
     background: radial-gradient(circle, rgb(58 43 63) 11%, rgb(0 0 0) 89%);
-    color: white;
+    color: #00fffb;
     text-align: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative; /* For floating dots */
-}
-.messages {
-    margin: 10px 0;
-}
-
-.alert {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.alert.error {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-.alert.success {
-    background-color: #d4edda;
-    color: #155724;
 }
 
 .header {
@@ -113,7 +93,7 @@ body {
     font-weight: bold;
 }
 
-.university-affiliation {
+.university-affiliation{
     font-size: 16px;
     font-weight: bold;
 }
@@ -288,7 +268,7 @@ body {
     animation-duration: 6s;
     animation-delay: 0.2s;
 }
-/* Additional dot size variation */
+
 .dot {
     width: 20px;
     height: 20px;
@@ -477,7 +457,6 @@ body {
     box-shadow: 0 0 40px #000; /* Slightly reduced shadow */
     transform: translateY(0) rotate(4deg) translateX(15px) scale(0.85); /* Scaled down */
     transform-origin: 0 0;
-    transition: transform 0.6s cubic-bezier(.8,.2,.1,0.8) 0.1s, background 0.4s linear;
     cursor: pointer;
     user-select: none;
     width: 80%; /* Reduced width */
@@ -577,11 +556,24 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* Event login styling*/
+.game-name{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.game-name h1{
+    position: relative;
+    font-size:5em;
+    color: #00eaff;
+    margin: 0em;
+}
+
 .event1-section {
     display: flex;
     justify-content: space-around;
     align-items: flex-start; /* Align items to the top */
-    margin-top: 50px; /* Adjust spacing between header and content */
+    margin-top: 0px; /* Adjust spacing between header and content */
     padding: 20px;
     width: 100%; /* Full width of the container */
     box-sizing: border-box;
@@ -592,7 +584,7 @@ body {
     padding: 16.5px;
     border-radius: 19px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    width: 51%;
+    width: 60%;
     color: #fff; /* Ensure text is readable */
 }
 
@@ -638,7 +630,7 @@ body {
 }
 
 /* Container for centering the button */
-.form-container {
+.form-container{
     display: flex;
     justify-content: center;  /* Centers the button horizontally */
 }
@@ -678,86 +670,154 @@ button:hover {
     }
 }
 
-.ranking-system {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Aligns podiums to the bottom of the container */
-    gap: 5em; /* Space between podiums */
-    margin-top: 50px; /* Space from the top of the page */
-    position: relative;
-    height: 255px; /* Adjust based on your design */
+/* Container for the podium */
+/* Container for the podium */
+/* Container for the podium */
+/* Container for the podium */
+/* Container for the podium */
+.podium h2, .login-form h2 {
+    color: #00fffb; /* Same text color as other headings */
+    align-items: center;
 }
 
 .podium {
-    width: 15em;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 16.5px;
+    border-radius: 19px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    width: 100%;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 2); /* Soft shadow for depth */
+    margin: 50px 0;
+  }
+  
+  .podium-item {
     text-align: center;
-    color: #000; /* Text color */
-}
-
-.first-place {
-    background: linear-gradient(to top, #ffd900, #413400); /* Gold gradient */
-    height: 165px; /* Height for the 1st place podium */
-    z-index: 3; /* Ensure the 1st place podium is on top */
-}
-
-.second-place {
-    background: linear-gradient(to top, #9c9c9c, #303030); /* Silver gradient */
-    height: 131px; /* Height for the 2nd place podium */
+    font-family: Arial, sans-serif;
+    padding: 10px;
     position: relative;
-    left: -70px; /* Shift to the left */
-    z-index: 2; /* Ensure the 2nd place podium is below the 1st place */
-}
-
-.third-place {
-    background: linear-gradient(to top, #cd7f32, #442b13); /* Bronze gradient */
-    height: 100px; /* Height for the 3rd place podium */
+  }
+  
+  .first-place {
+    
+    background: linear-gradient(145deg, #FFD700, #FFEC8B); /* Classy Gold Gradient */
+    border: 3px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(255, 223, 0, 0.4);
+    height: 220px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
-    left: 70px; /* Shift to the right */
-    z-index: 1; /* Ensure the 3rd place podium is below both the 1st and 2nd places */
-}
-
-.podium-content {
-    font-size: 18px;
+  }
+  
+  .second-place {
+    background: linear-gradient(145deg, #C0C0C0, #E0E0E0); /* Classy Silver Gradient */
+    border: 3px solid #C0C0C0;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(192, 192, 192, 0.4);
+    height: 180px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .third-place {
+    background: linear-gradient(145deg, #CD7F32, #D29C76); /* Classy Bronze Gradient */
+    border: 3px solid #CD7F32;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(205, 127, 50, 0.4);
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .rank {
+    font-size: 36px;
     font-weight: bold;
-}
-
-.winner-ranker {
-    position: absolute;
-    top: 3vw;
+    background-color: #fff;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 50%;
     font-size: 2em;
     font-weight: bold;
-    color: #ffffff; /* Text color */
-}
-
-.second-ranker {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
     position: absolute;
-    top: -3vw;
-    font-size: 2em;
-    font-weight: bold;
-    color: #ffffff; /* Text color */
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
-
-.third-ranker {
+.podium-item:hover .rank {
+    transform: scale(1.1);
+}
+  
+  .department {
+    font-size: 25px;
+    padding: 50px 0;
+    color: black;
+  }
+  
+  .medal {
     position: absolute;
-    top: -3vw;
-    font-size: 2em;
-    font-weight: bold;
-    color: #ffffff; /* Text color */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .gold-medal {
+    background: url('images/medal\ \(1\).png') no-repeat center center/contain;
+    width: 60px;
+    height: 450px;
+  }
+  
+  .silver-medal {
+    background: url('images/medal\ \(2\).png') no-repeat center center/contain;
+    width: 60px;
+    height: 370px;
+  }
+  
+  .bronze-medal {
+    background: url('images/medal.png') no-repeat center center/contain;
+    width: 60px;
+    height: 310px;
+}
+  
+.podium-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.registration-container {
-    max-width: 600px;
-    margin: 50px auto;
+
+  /* 3D effect styling for podiums */
+  .podium-item::before {
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+  }
+  .podium-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2), 0px 10px 30px rgba(255, 255, 255, 0.3);
 }
+
 
 .student-form {
     display: grid;

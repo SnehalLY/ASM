@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1 - Game Rules</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %}" alt="Left Logo" id="headerim1">
+        <div class="college-info">
+            <div class="managing-society">Bansilal Ramnath Agarwal Charitable Trust's</div>
+            <div class="college-name">Vishwakarma Institute Of Information Technology, Pune</div>
+            <div class="university-affiliation">(An Autonomous Institute affiliated to Savitribai Phule Pune University)</div>
+        </div>
+        <img src="{% static 'myapp/images/sports-club-logo.png' %}" alt="Right Logo" id="headerim2">
+    </div>
+
+    <div class="game-name">
+        <h1><B>CARROM</B></h>
+    </div>
+
+    <!-- Main Event Section -->
+    <div class="event1-section">
+        <div class="game-rules">
+            <h2>Game Rules</h2>
+            <ul class="rules-list">
+                    <li>TO BE EDITED</li>
+                    <li> • Type of Tournament: Knockout/League/Round-robin.</li>
+                    <li> • Number of Teams: Tournament will have a total of X teams participating.</li>
+                    <li> • Team Composition:</li>
+                    <li> • Each team must have a minimum of 5 players and a maximum of 12 players.</li>
+                    <li> • Teams should have at least 1 coach or team manager.</li>
+                    <li> • Match Duration:</li>
+                    <li> • Each game will consist of four quarters, each lasting 10 minutes (adjustable based on the format).</li>
+                    <li> • Timeouts: Each team is permitted two 60-second timeouts per half.</li>
+                   
+                    <li>2: Game Rules </li>
+                    <li> • Playing Time:
+                    <li> • Each quarter will last 10 minutes (or 12 minutes for specific formats).</li>
+                    <li> • 2-minute breaks between quarters and a 10-minute break at halftime.</li>
+                    <li> • In case of a tie, there will be an overtime of 5 minutes.</li>
+                    <li> •Scoring: </li>
+                    <li> • Field goals inside the three-point arc are worth 2 points.</li>
+                    <li> • Field goals beyond the three-point arc are worth 3 points.</li>
+                    <li> • Each successful free throw is worth 1 point</li>
+                    <li>• Substitutions:</li>
+                    <li> • Unlimited substitutions, but only during dead-ball situations or timeouts.</li>
+                    <li> • Jump Ball:</li>
+                    <li> •   The game begins with a jump ball, and subsequent possessions alternate.</li>
+                    <li>3: Player Eligibility</li>
+                    <li> • Players must be officially registered with their team before the tournament begins.</li>
+                    <li> • No player is allowed to play for more than one team during the tournament.</li>
+                    <li> • Teams must wear matching uniforms, with distinct numbers for each player.</li>
+                    <li> 4:Fouls and Violations</li>
+                    <li> • Personal Fouls: </li> 
+                    <li> • Each player is allowed up to 5 personal fouls before being disqualified. </li> 
+                    <li> •Team Fouls: </li> 
+                    <li> •After a team accumulates 4 team fouls in a quarter, any additional fouls will result in free throws for the opposing team. </li> 
+                    <li> •Technical Fouls: </li> 
+                    <li> •	Technical fouls for unsportsmanlike conduct will result in 2 free throws for the opposing team and possession of the ball. </li> 
+                    <li> •	Two technical fouls lead to player ejection. </li> 
+                    <li> •Common Violations: </li> 
+                    <li> •	Traveling, double dribble, and carrying the ball result in a turnover.</li> 
+                    <li> •	Backcourt violation will be enforced after 8 seconds of ball possession in the backcourt. </li> 
+                    <li>5. Equipment </li> 
+                    <li> • Basketball Size: </li> 
+                    <li> • Size 7 (29.5 inches) for men’s games. </li> 
+                    <li> • Size 6 (28.5 inches) for women’s games. </li> 
+                    <li> • Court: </li> 
+                    <li> • Standard basketball court dimensions (28.65m x 15.24m). </li> 
+                    <li> • Basket Height:</li> 
+                    <li> • The basket will be 10 feet from the floor. </li> 
+                    <li> •Uniform:</li> 
+                    <li> • Teams must wear jerseys of the same color with clearly visible numbers on the front and back. </li> 
+                    <li> 6. Code of Conduct</li> 
+                    <li> •	Players and coaches are expected to demonstrate good sportsmanship and respect for referees, officials, and opponents at all times. </li> 
+                    <li> •  Disrespectful behavior, use of foul language, or any form of physical altercation will lead to warnings, technical fouls, or ejection from the game. </li> 
+                    <li> •	Fans and supporters should maintain discipline and avoid interrupting the game. </li> 
+                    <li> 7. Tie-Breaking Criteria (For League Format)</li> 
+                    <li> •  Head-to-Head: The winner of the game between tied teams will be ranked higher. </li> 
+                    <li> •  Points Difference: If teams are tied, the point differential between points scored and conceded will determine rankings.</li> 
+                    <li> •	Extra Time: In knockout stages, if the match is tied, a 5-minute overtime period will be played. If still tied, another overtime will follow until a winner is determined. </li> 
+                    <li> 8. Referees and Officials </li> 
+                    <li> •	Referees: Two referees will be assigned to each game, and their decisions are final. </li> 
+                    <li> •	Scorekeeper and Timekeeper: Each game will have an official scorekeeper and timekeeper. </li> 
+                    <li> 9. Injuries and Substitutions </li> 
+                    <li> •	All other futsal rules are applicable to this tournament unless specified otherwise. </li>                    
+            </ul>
+        </div>
+        <div class="login-form">
+            <h2>Student Registration</h2>
+            <div class="form-container">
+              <a href="{% url 'register' %}">
+                  <button type="button">REGISTER</button>
+              </a>
+          </div>
+        </div>
+    </div>
+    <h1><B>CARROM WINNERS (W)</B></h>
+        <div class="podium">
+            <div id="secondPlace" class="second-place podium-item">
+              <span id="secondRank" class="rank">2</span>
+              <div id="secondDepartment" class="department">
+                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+              </div>
+              <div class="medal silver-medal"></div>
+            </div>
+            <div id="firstPlace" class="first-place podium-item">
+              <span id="firstRank" class="rank">1</span>
+              <div id="firstDepartment" class="department">
+                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+              </div>
+              <div class="medal gold-medal"></div>
+            </div>
+            <div id="thirdPlace" class="third-place podium-item">
+              <span id="thirdRank" class="rank">3</span>  
+              <div id="thirdDepartment" class="department">
+                <div id="thirdDept1" class="dept">MECH</div>
+              </div>
+              <div class="medal bronze-medal"></div>
+            </div>
+          </div>
+          <h1><B>CARROM WINNERS (M)</B></h>
+          <div class="podium">
+            <div id="secondPlace" class="second-place podium-item">
+              <span id="secondRank" class="rank">2</span>
+              <div id="secondDepartment" class="department">
+                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+              </div>
+              <div class="medal silver-medal"></div>
+            </div>
+            <div id="firstPlace" class="first-place podium-item">
+              <span id="firstRank" class="rank">1</span>
+              <div id="firstDepartment" class="department">
+                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+              </div>
+              <div class="medal gold-medal"></div>
+            </div>
+            <div id="thirdPlace" class="third-place podium-item">
+              <span id="thirdRank" class="rank">3</span>
+              <div id="thirdDepartment" class="department">
+                <div id="thirdDept1" class="dept">MECH</div>
+              </div>
+              <div class="medal bronze-medal"></div>
+            </div>
+          </div>
+      
+    <!-- Add more dots for more frequent floating effect -->
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    </div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"><>/div>
+        
+
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot">
+       
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</body>
+</html>

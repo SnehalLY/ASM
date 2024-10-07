@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1 - Game Rules</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %}" alt="Left Logo" id="headerim1">
+        <div class="college-info">
+            <div class="managing-society">Bansilal Ramnath Agarwal Charitable Trust's</div>
+            <div class="college-name">Vishwakarma Institute Of Information Technology, Pune</div>
+            <div class="university-affiliation">(An Autonomous Institute affiliated to Savitribai Phule Pune University)</div>
+        </div>
+        <img src="{% static 'myapp/images/sports-club-logo.png' %}" alt="Right Logo" id="headerim2">
+    </div>
+
+    <div class="game-name">
+        <h1><B>KABBADI</B></h>
+    </div>
+
+    <!-- Main Event Section -->
+    <div class="event1-section">
+        <div class="game-rules">
+            <h2>Game Rules</h2>
+            <ul class="rules-list">
+                    <li>Failure to report on time will result in a match forfeit or walkover for the opposing team. </li>
+                    <li>•	Teams can substitute players during breaks or timeouts.
+                    </li>
+                    <li>2. Knockout Format: The tournament will follow a knockout format
+                    </li>
+                    <li>3. Match Points and Format: Matches consist of two halves, each lasting 7 minutes.
+                    </li>
+                    <li> •	Overtime: If the match is tied at the end of regulation, there will be a 5-minute extra time period.
+                    </li>
+                    <li>4. Raid Rules: The raider must chant "Kabaddi" continuously while raiding.
+                    </li>
+                    <li> o	Each raid lasts a maximum of 30 seconds.
+                    </li>
+                    <li>o	Successful raids earn points based on the number of defenders tagged.
+                    </li>
+                    <li>5. Defensive Rules: Defenders must tackle the raider in a fair manner.
+
+                    </li>
+                    <li> o	Illegal actions like pulling hair or holding the neck are prohibited.
+
+                    </li>
+                    <li>6. Time-Outs: Each team is allowed two time-outs per half, each lasting 30 seconds.
+                    </li>
+                    <li>7. Fouls:Stepping out of bounds- If player steps out of the boundary lines during raid, they are declared out.
+
+                    </li>
+                    <li>8. Conduct Rules: The referee’s decision is final.
+
+                      </li>
+                    <li>•	Rough play and ny abusive or physical misbehavior can lead to disqualification of the entire team. 
+
+                    </li> 
+                    <li>9. Attire and Instructions: Players must wear proper kabaddi uniforms(no jeans allowed).
+
+                    </li> 
+                    <li>•	Players must not wear any equipment or accessories including jewelry or anything that may cause injury.</li> 
+                     
+                    </ul>
+        </div>
+        <div class="login-form">
+            <h2>Student Login</h2>
+            <form action="{% url 'event6' %}" method="POST">
+              {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-container">
+                    <button>Login</button>
+                </div>                
+            </form>
+        </div>
+
+    </div>
+    <form action="{% url 'view_draws' %}" method="GET">
+      <button type="submit">View Draws</button>
+  </form>
+    <h1><B>KABBADI WINNERS (W)</B></h>
+    <div class="podium">
+        <div id="secondPlace" class="second-place podium-item">
+          <span id="secondRank" class="rank">2</span>
+          <div id="secondDepartment" class="department">
+            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+          </div>
+          <div class="medal silver-medal"></div>
+        </div>
+        <div id="firstPlace" class="first-place podium-item">
+          <span id="firstRank" class="rank">1</span>
+          <div id="firstDepartment" class="department">
+            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+          </div>
+          <div class="medal gold-medal"></div>
+        </div>
+        <div id="thirdPlace" class="third-place podium-item">
+          <span id="thirdRank" class="rank">3</span>
+          <div id="thirdDepartment" class="department">
+            <div id="thirdDept1" class="dept">MECH</div>
+          </div>
+          <div class="medal bronze-medal"></div>
+        </div>
+      </div>
+      <h1><B>KABADDI WINNERS (M)</B></h>
+      <div class="podium">
+        <div id="secondPlace" class="second-place podium-item">
+          <span id="secondRank" class="rank">2</span>
+          <div id="secondDepartment" class="department">
+            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+          </div>
+          <div class="medal silver-medal"></div>
+        </div>
+        <div id="firstPlace" class="first-place podium-item">
+          <span id="firstRank" class="rank">1</span>
+          <div id="firstDepartment" class="department">
+            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+          </div>
+          <div class="medal gold-medal"></div>
+        </div>
+        <div id="thirdPlace" class="third-place podium-item">
+          <span id="thirdRank" class="rank">3</span>
+          <div id="thirdDepartment" class="department">
+            <div id="thirdDept1" class="dept">MECH</div>
+          </div>
+          <div class="medal bronze-medal"></div>
+        </div>
+      </div>
+      
+      
+    <!-- Add more dots for more frequent floating effect -->
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    </div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+        
+
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot">
+       
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</body>
+</html>

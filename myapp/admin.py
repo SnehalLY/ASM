@@ -1,7 +1,7 @@
 # admin.py
 
 from django.contrib import admin
-from .models import DeptHead, Student, Department
+from .models import DeptHead, Student, Department, winners
 from .forms import DeptHeadForm
 
 @admin.register(DeptHead)
@@ -16,3 +16,7 @@ class StudentAdmin(admin.ModelAdmin):
 @admin.register(Department)
 class DepartmentAdmin(admin.ModelAdmin):
     list_display = ('dept_name' , 'dept_head' , 'score')
+
+@admin.register(winners)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = ('name' , 'event')

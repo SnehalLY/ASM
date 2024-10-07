@@ -22,6 +22,8 @@ class Department(models.Model):
 
     def __str__(self):
         return f"{self.dept_name}"
+    
+
 
 
 class Student(models.Model):
@@ -42,3 +44,10 @@ class Student(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} ({self.prn})"
+    
+class winners(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    event = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.name} {self.event}"

@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1 - Game Rules</title>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %}" alt="Left Logo" id="headerim1">
+        <div class="college-info">
+            <div class="managing-society">Bansilal Ramnath Agarwal Charitable Trust's</div>
+            <div class="college-name">Vishwakarma Institute Of Information Technology, Pune</div>
+            <div class="university-affiliation">(An Autonomous Institute affiliated to Savitribai Phule Pune University)</div>
+        </div>
+        <img src="{% static 'myapp/images/sports-club-logo.png' %}" alt="Right Logo" id="headerim2">
+    </div>
+
+    <div class="game-name">
+        <h1><B>KHO-KHO</B></h>
+    </div>
+
+    <!-- Main Event Section -->
+    <div class="event1-section">
+        <div class="game-rules">
+            <h2>Game Rules</h2>
+            <ul class="rules-list">
+                    <li>1. A team shall consist of 9+3 players (9 playing and 3 substitutes).
+                    </li>
+                    <li>2. All the rules should be followed as per kho-kho federation.
+                    </li>
+                    <li>3. Aggressive behaviour and foul language can result in the player or even the whole team being disqualified.
+                    </li>
+                    <li>4. Team should be at the venue half an hour before the allotted match time, failing to which team may be disqualified.
+                    </li>
+                    <li>5. A match consists of two innings with each inning consisting of chasing and running turns of 5 minutes each for boys and 5 minutes each for girls.
+                    </li>
+                    <li>6. Semi-final and final will be of 7 minutes for boys and 5 minutes for girls for each inning.
+                    </li>
+                    <li>NOTE: The above-mentioned rules and regulations are to be strictly followed by the team. 
+                      If there is any disobedience with regards to the rules and regulations by any team, it may result in disqualification.
+                    </li>
+                    </ul>
+        </div>
+        <div class="login-form">
+            <h2>Student Login</h2>
+            <form action="{% url 'event13' %}" method="POST">
+              {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-container">
+                    <button>Login</button>
+                </div>                
+            </form>
+        </div>
+
+    </div>
+    <form action="{% url 'view_draws' %}" method="GET">
+      <button type="submit">View Draws</button>
+  </form>
+    <h1><B>KHO-KHO WINNERS (W)</B></h>
+    <div class="podium">
+        <div id="secondPlace" class="second-place podium-item">
+          <span id="secondRank" class="rank">2</span>
+          <div id="secondDepartment" class="department">
+            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+          </div>
+          <div class="medal silver-medal"></div>
+        </div>
+        <div id="firstPlace" class="first-place podium-item">
+          <span id="firstRank" class="rank">1</span>
+          <div id="firstDepartment" class="department">
+            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+          </div>
+          <div class="medal gold-medal"></div>
+        </div>
+        <div id="thirdPlace" class="third-place podium-item">
+          <span id="thirdRank" class="rank">3</span>
+          <div id="thirdDepartment" class="department">
+            <div id="thirdDept1" class="dept">MECH</div>
+          </div>
+          <div class="medal bronze-medal"></div>
+        </div>
+      </div>
+      <h1><B>KHO-KHO WINNERS (M)</B></h>
+      <div class="podium">
+        <div id="secondPlace" class="second-place podium-item">
+          <span id="secondRank" class="rank">2</span>
+          <div id="secondDepartment" class="department">
+            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+          </div>
+          <div class="medal silver-medal"></div>
+        </div>
+        <div id="firstPlace" class="first-place podium-item">
+          <span id="firstRank" class="rank">1</span>
+          <div id="firstDepartment" class="department">
+            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+          </div>
+          <div class="medal gold-medal"></div>
+        </div>
+        <div id="thirdPlace" class="third-place podium-item">
+          <span id="thirdRank" class="rank">3</span>
+          <div id="thirdDepartment" class="department">
+            <div id="thirdDept1" class="dept">MECH</div>
+          </div>
+          <div class="medal bronze-medal"></div>
+        </div>
+      </div>
+      
+      
+    <!-- Add more dots for more frequent floating effect -->
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    </div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+        
+
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot">
+       
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</body>
+</html>

@@ -23,6 +23,7 @@ def event1(request):
             # Fetch user by username
             user = DeptHead.objects.get(username=username)
             
+            
             # Check if the password matches (assuming password is hashed)
             if user.check_password(password):
                 # Authentication successful, redirect to registration
@@ -36,7 +37,7 @@ def event1(request):
             messages.error(request, "Invalid username, please try again.")
     
     # Render the event1 page with the login form
-    return render(request , 'myapp/event1.html')
+    return render(request , 'myapp/event1_login.html')
     
 
 def event2(request):
@@ -62,7 +63,7 @@ def event2(request):
             messages.error(request, "Invalid username, please try again.")
     
     # Render the event1 page with the login form
-    return render(request, 'myapp/event2.html')
+    return render(request, 'myapp/event2_login.html')
 
 def event3(request):
     request.session['event'] = 'Basketball'
@@ -87,7 +88,7 @@ def event3(request):
             messages.error(request, "Invalid username, please try again.")
     
     # Render the event1 page with the login form
-    return render(request, 'myapp/event3.html')
+    return render(request, 'myapp/event3_login.html')
 
 def event4(request):
     request.session['event'] = 'Chess'
@@ -112,7 +113,175 @@ def event4(request):
             messages.error(request, "Invalid username, please try again.")
     
     # Render the event1 page with the login form
-    return render(request, 'myapp/event4.html')
+    return render(request, 'myapp/event4_login.html')
+
+def event5(request):
+    request.session['event'] = 'Athletics'
+    if request.method == 'POST':
+                return redirect('register')
+
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event5_login.html')
+
+
+def event6(request):
+    request.session['event'] = 'Tug of War'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event6_login.html')
+
+def event7(request):
+    request.session['event'] = 'Volleyball'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event7_login.html')
+
+def event8(request):
+    request.session['event'] = 'Handball'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event8_login.html')
+
+def event9(request):
+    request.session['event'] = 'Kabaddi'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event9_login.html')
+
+def event10(request):
+    request.session['event'] = 'Badminton'
+    if request.method == 'POST':
+                return redirect('register')
+
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event10_login.html')
+
+def event11(request):
+    request.session['event'] = 'Table-Tennis'
+    if request.method == 'POST':
+                return redirect('register')
+
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event11_login.html')
+
+def event12(request):
+    request.session['event'] = 'Carrom'
+    if request.method == 'POST':
+                return redirect('register')
+
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event12_login.html')
+
+
+
+def event13(request):
+    request.session['event'] = 'Kho-Kho'
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        try:
+            # Fetch user by username
+            user = DeptHead.objects.get(username=username)
+            
+            # Check if the password matches (assuming password is hashed)
+            if user.check_password(password):
+                # Authentication successful, redirect to registration
+                return redirect('register')
+            else:
+                # Password doesn't match, show an error message
+                messages.error(request, "Invalid password, please try again.")
+        
+        except DeptHead.DoesNotExist:
+            # Username doesn't exist, show an error message
+            messages.error(request, "Invalid username, please try again.")
+    
+    # Render the event1 page with the login form
+    return render(request, 'myapp/event13_login.html')
+
+def view_draws(request):
+    # Logic for handling the view, if needed
+    return render(request, 'myapp/Indexdraws.html')
 
 def register(request):
     return render(request, 'myapp/register.html')

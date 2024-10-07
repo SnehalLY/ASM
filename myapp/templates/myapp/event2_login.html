@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 1 - Game Rules</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %}" alt="Left Logo" id="headerim1">
+        <div class="college-info">
+            <div class="managing-society">Bansilal Ramnath Agarwal Charitable Trust's</div>
+            <div class="college-name">Vishwakarma Institute Of Information Technology, Pune</div>
+            <div class="university-affiliation">(An Autonomous Institute affiliated to Savitribai Phule Pune University)</div>
+        </div>
+        <img src="{% static 'myapp/images/sports-club-logo.png' %}" alt="Right Logo" id="headerim2">
+    </div>
+
+    <div class="game-name">
+        <h1><B>CRICKET</B></h>
+    </div>
+
+    <!-- Main Event Section -->
+    <div class="event1-section">
+        <div class="game-rules">
+            <h2>Game Rules</h2>
+            <ul class="rules-list">
+                    <li>1.⁠ ⁠Tournament Format:  Matches will be played in knockout format. </li>
+                    <li> • ⁠The tournament will be played with tennis ball.</li>
+                    <li>• Sports shoes are compulsory for every player. </li>
+                    <li> • ⁠For women matches number of overs in the match and rules may vary.</li>
+                    <li> 2.⁠ ⁠General Rules:</li>
+                    <li> • The tournament will follow a 11-a-side format , each team allowed a maximum of 11 players on the field at a time.</li>
+                    <li> • ⁠The match is of 5 overs with 1 over allowed for powerplay allowing only 2 fielders outside the circle.</li>
+                    <li> • The Semi-finals and Finals will be of 6 overs and 2 overs of powerplay.</li>
+                    <li> • Overstepping by the bowler will be a No-ball.</li>
+                    <li> •  Ball bowled directly above the waist height of batsman will also be a No-ball
+                    <li> •	More than one bouncer above the shoulder level of batsman in an over will be considered a No-ball.</li>
+                    <li> •	A bowler is allowed to bowl only 1 over and in Semi-finals and Finals a bowler can bowl a max of 2 overs</li>
+                    <li> •  ⁠All types of dismissals are allowed. </li>
+                    <li> •  1 run will be given to batting team for every wide and No-ball without counting the delivery.</li>
+                    <li> 3.⁠ ⁠Dispute Resolution:</li>
+                    <li> •	Disputes or complaints must be raised to organizing committee in writing within 30 minutes of match's conclusion.</li>
+                    <li> •⁠  ⁠If there is confusion between umpire and staff , decision will be  given by Umpire and Cricket Event Head.</li>
+                    <li> 4.⁠ ⁠Reporting to Matches:  Teams must report 15 minutes before the scheduled match time.
+                    <li> •⁠  ⁠Failure to report on time will result in a match forfeit or walkover for the opposing team. </li> 
+                                     
+            </ul>
+        </div>
+        <div class="login-form">
+            <h2>Student Login</h2>
+            <form action="{% url 'event2' %}" method="POST">
+              {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-container">
+                    <button>Login</button>
+                </div>                
+            </form>
+        </div>
+    </div>
+    <form action="{% url 'view_draws' %}" method="GET">
+      <button type="submit">View Draws</button>
+  </form>
+    <h1><B>CRICKET WINNERS (W)</B></h>
+        <div class="podium">
+            <div id="secondPlace" class="second-place podium-item">
+              <span id="secondRank" class="rank">2</span>
+              <div id="secondDepartment" class="department">
+                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+              </div>
+              <div class="medal silver-medal"></div>
+            </div>
+            <div id="firstPlace" class="first-place podium-item">
+              <span id="firstRank" class="rank">1</span>
+              <div id="firstDepartment" class="department">
+                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+              </div>
+              <div class="medal gold-medal"></div>
+            </div>
+            <div id="thirdPlace" class="third-place podium-item">
+              <span id="thirdRank" class="rank">3</span>  
+              <div id="thirdDepartment" class="department">
+                <div id="thirdDept1" class="dept">MECH</div>
+              </div>
+              <div class="medal bronze-medal"></div>
+            </div>
+          </div>
+          <h1><B>CRICKET WINNERS (M)</B></h>
+          <div class="podium">
+            <div id="secondPlace" class="second-place podium-item">
+              <span id="secondRank" class="rank">2</span>
+              <div id="secondDepartment" class="department">
+                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+              </div>
+              <div class="medal silver-medal"></div>
+            </div>
+            <div id="firstPlace" class="first-place podium-item">
+              <span id="firstRank" class="rank">1</span>
+              <div id="firstDepartment" class="department">
+                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+              </div>
+              <div class="medal gold-medal"></div>
+            </div>
+            <div id="thirdPlace" class="third-place podium-item">
+              <span id="thirdRank" class="rank">3</span>
+              <div id="thirdDepartment" class="department">
+                <div id="thirdDept1" class="dept">MECH</div>
+              </div>
+              <div class="medal bronze-medal"></div>
+            </div>
+          </div>
+          
+      
+    <!-- Add more dots for more frequent floating effect -->
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+                        <div class="dot">
+    </div>
+    <div class="dot"></div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    </div>
+    <div class="dot">
+        <div class="dot">
+            <div class="dot">
+                <div class="dot">
+                    <div class="dot">
+    
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"><>/div>
+        
+
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot">
+       
+    </div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</body>
+</html>

@@ -27,44 +27,43 @@
         <div class="game-rules">
             <h2>Game Rules</h2>
             <ul class="rules-list">
-                    <li>•	Type of Tournament: Knockout matches.
+                    <li>•Type of Tournament: Knockout matches.
                     </li>
-                    <li>•	Number of Teams: Tournament will have a total of 8 teams participating distributing in two slots(A,B).
+                    <li>•Number of Teams: Tournament will have a total of 8 teams participating distributing in two slots(A,B).
                     </li>
-                    <li>•	Team Composition:Each team must have a minimum of 7 players & maximum of 14 players.
+                    <li>•Team Composition:Each team must have a minimum of 7 players & maximum of 14 players.
                     </li>
-                    <li>• Match Duration: Each game will consist of two 2 halves with each running half lasting seven (7) minutes in length. 
-                      During the last minute of the 2nd half, the clock will stop at all dead ball situations.
+                    <li>•Match Duration: Each game will consist of two 2 halves with each running half lasting seven (7) minutes in length. 
+                    <li>•During the last minute of the 2nd half, the clock will stop at all dead ball situations.
                     </li>
-                    <li>2. Game Rules:
-                    Each team will be allowed one 1 time-out per game. A time-out will be one 1 minute in length.                       
+                    <li>•Game Rules: Each team will be allowed one 1 time-out per game. A time-out will be one 1 minute in length.                       
                     </li>
-                    <li>•	A jump ball will start each game. Players are allowed to be on either side of the court.
+                    <li>•A jump ball will start each game. Players are allowed to be on either side of the court.
                     </li>
-                    <li>•	A goal is worth one point and is registered when the ball completely breaks the vertical plane of the goal line.
+                    <li>•A goal is worth one point and is registered when the ball completely breaks the vertical plane of the goal line.
                     </li>
-                    <li>•	A throw-in is awarded to the opponent when one team loses the ball out of bounds on a sideline. 
+                    <li>•A throw-in is awarded to the opponent when one team loses the ball out of bounds on a sideline. 
                     </li>
-                    <li>•	Defensive players can use their bodies to obstruct an opponent either with or without the ball. 
+                    <li>•Defensive players can use their bodies to obstruct an opponent either with or without the ball. 
                     </li>
-                    <li>•	Uniform:
-                      Teams must wear jersey and shorts with shoes compulsory.                      
+                    <li>•Uniform:Teams must wear jersey and shorts with shoes compulsory.                      
                     </li>
-                    <li>Disrespectful behaviour/ use of foul language/ any form of physical altercation will lead to warnings, fouls, or ejection from game.
+                    <li>•Disrespectful behaviour/ use of foul language/ any form of physical altercation will lead to ejection from game.
                     </li>
-                    <li>Referees: Two referees will be assigned to each game, and their decisions are final.
-                    </li> <li>Injuries and Substitutions: Players who sustain injuries must immediately leave the court.                      
+                    <li>•Referees: Two referees will be assigned to each game, and their decisions are final.   
                     </li>
-                    <li>Player Ejection: Any player who receives 2 technical fouls will be disqualified for the rest of the game and also for the next game.
-                      </li>
-                    <li>Uniform Conflict: If player is not in proper uniform then he will be not allowed to play the match.
+                    <li>•Injuries and Substitutions: Players who sustain injuries must immediately leave the court.                      
+                    </li>
+                    <li>•Any player who receives 2 technical fouls will be disqualified for the rest of the game and also for the next game.
+                    </li>
+                    <li>•Uniform Conflict: If player is not in proper uniform then he will be not allowed to play the match.
                     </li> 
                     </ul>
         </div>
         <div class="login-form">
             <h2>Student Login</h2>
-            <form action="{% url 'event6' %}" method="POST">
-              {% csrf_token %}
+            <form action="{% url 'event8' %}" method="POST">
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>
@@ -80,53 +79,26 @@
         </div>
 
     </div>
-    <form action="{% url 'view_draws' %}" method="GET">
-      <button type="submit">View Draws</button>
-  </form>
-    <h1><B>HANDBALL WINNERS (W)</B></h>
-    <div class="podium">
-        <div id="secondPlace" class="second-place podium-item">
-          <span id="secondRank" class="rank">2</span>
-          <div id="secondDepartment" class="department">
-            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
-          </div>
-          <div class="medal silver-medal"></div>
-        </div>
-        <div id="firstPlace" class="first-place podium-item">
-          <span id="firstRank" class="rank">1</span>
-          <div id="firstDepartment" class="department">
-            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
-          </div>
-          <div class="medal gold-medal"></div>
-        </div>
-        <div id="thirdPlace" class="third-place podium-item">
-          <span id="thirdRank" class="rank">3</span>
-          <div id="thirdDepartment" class="department">
-            <div id="thirdDept1" class="dept">MECH</div>
-          </div>
-          <div class="medal bronze-medal"></div>
-        </div>
-      </div>
-      <h1><B>HANDBALL WINNERS (M)</B></h>
+         <h1><B>HANDBALL WINNERS(M)</B></h>
       <div class="podium">
         <div id="secondPlace" class="second-place podium-item">
           <span id="secondRank" class="rank">2</span>
           <div id="secondDepartment" class="department">
-            <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+            <div id="secondDept1" class="dept">TO BE ANNOUNCED SOON..</div>
           </div>
           <div class="medal silver-medal"></div>
         </div>
         <div id="firstPlace" class="first-place podium-item">
           <span id="firstRank" class="rank">1</span>
           <div id="firstDepartment" class="department">
-            <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+            <div id="firstDept1" class="dept">TO BE ANNOUNCED SOON..</div>
           </div>
           <div class="medal gold-medal"></div>
         </div>
         <div id="thirdPlace" class="third-place podium-item">
           <span id="thirdRank" class="rank">3</span>
           <div id="thirdDepartment" class="department">
-            <div id="thirdDept1" class="dept">MECH</div>
+            <div id="thirdDept1" class="dept">TO BE ANNOUNCED SOON..</div>
           </div>
           <div class="medal bronze-medal"></div>
         </div>

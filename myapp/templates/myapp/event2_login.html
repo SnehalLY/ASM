@@ -27,25 +27,25 @@
         <div class="game-rules">
             <h2>Game Rules</h2>
             <ul class="rules-list">
-                    <li>1.⁠ ⁠Tournament Format:  Matches will be played in knockout format. </li>
-                    <li> • ⁠The tournament will be played with tennis ball.</li>
+                    <li>1.⁠Tournament Format:  Matches will be played in knockout format. </li>
+                    <li>•⁠ The tournament will be played with tennis ball.</li>
                     <li>• Sports shoes are compulsory for every player. </li>
-                    <li> • ⁠For women matches number of overs in the match and rules may vary.</li>
-                    <li> 2.⁠ ⁠General Rules:</li>
-                    <li> • The tournament will follow a 11-a-side format , each team allowed a maximum of 11 players on the field at a time.</li>
-                    <li> • ⁠The match is of 5 overs with 1 over allowed for powerplay allowing only 2 fielders outside the circle.</li>
-                    <li> • The Semi-finals and Finals will be of 6 overs and 2 overs of powerplay.</li>
-                    <li> • Overstepping by the bowler will be a No-ball.</li>
-                    <li> •  Ball bowled directly above the waist height of batsman will also be a No-ball
-                    <li> •	More than one bouncer above the shoulder level of batsman in an over will be considered a No-ball.</li>
-                    <li> •	A bowler is allowed to bowl only 1 over and in Semi-finals and Finals a bowler can bowl a max of 2 overs</li>
-                    <li> •  ⁠All types of dismissals are allowed. </li>
-                    <li> •  1 run will be given to batting team for every wide and No-ball without counting the delivery.</li>
-                    <li> 3.⁠ ⁠Dispute Resolution:</li>
-                    <li> •	Disputes or complaints must be raised to organizing committee in writing within 30 minutes of match's conclusion.</li>
-                    <li> •⁠  ⁠If there is confusion between umpire and staff , decision will be  given by Umpire and Cricket Event Head.</li>
-                    <li> 4.⁠ ⁠Reporting to Matches:  Teams must report 15 minutes before the scheduled match time.
-                    <li> •⁠  ⁠Failure to report on time will result in a match forfeit or walkover for the opposing team. </li> 
+                    <li>• ⁠For women matches number of overs in the match and rules may vary.</li>
+                    <li>2.⁠⁠General Rules:</li>
+                    <li>• The tournament will follow a 11-a-side format , each team allowed a maximum of 11 players on the field at a time.</li>
+                    <li>• ⁠The match is of 5 overs with 1 over allowed for powerplay allowing only 2 fielders outside the circle.</li>
+                    <li>• The Semi-finals and Finals will be of 6 overs and 2 overs of powerplay.</li>
+                    <li>• Overstepping by the bowler will be a No-ball.</li>
+                    <li>• Ball bowled directly above the waist height of batsman will also be a No-ball
+                    <li>•	More than one bouncer above the shoulder level of batsman in an over will be considered a No-ball.</li>
+                    <li>•	A bowler is allowed to bowl only 1 over and in Semi-finals and Finals a bowler can bowl a max of 2 overs</li>
+                    <li>• ⁠All types of dismissals are allowed. </li>
+                    <li>• 1 run will be given to batting team for every wide and No-ball without counting the delivery.</li>
+                    <li>3.⁠Dispute Resolution:</li>
+                    <li>•	Disputes or complaints must be raised to organizing committee in writing within 30 minutes of match's conclusion.</li>
+                    <li>•⁠ ⁠If there is confusion between umpire and staff , decision will be  given by Umpire and Cricket Event Head.</li>
+                    <li>4.⁠⁠Reporting to Matches:  Teams must report 15 minutes before the scheduled match time.
+                    <li>•⁠ ⁠Failure to report on time will result in a match forfeit or walkover for the opposing team. </li> 
                                      
             </ul>
         </div>
@@ -65,55 +65,60 @@
                     <button>Login</button>
                 </div>                
             </form>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
-    <form action="{% url 'view_draws' %}" method="GET">
-      <button type="submit">View Draws</button>
-  </form>
-    <h1><B>CRICKET WINNERS (W)</B></h>
+   
+    <h1><B>CRICKET WINNERS(W)</B></h>
         <div class="podium">
             <div id="secondPlace" class="second-place podium-item">
               <span id="secondRank" class="rank">2</span>
               <div id="secondDepartment" class="department">
-                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+                <div id="secondDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal silver-medal"></div>
             </div>
             <div id="firstPlace" class="first-place podium-item">
               <span id="firstRank" class="rank">1</span>
               <div id="firstDepartment" class="department">
-                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+                <div id="firstDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal gold-medal"></div>
             </div>
             <div id="thirdPlace" class="third-place podium-item">
               <span id="thirdRank" class="rank">3</span>  
               <div id="thirdDepartment" class="department">
-                <div id="thirdDept1" class="dept">MECH</div>
+                <div id="thirdDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal bronze-medal"></div>
             </div>
           </div>
-          <h1><B>CRICKET WINNERS (M)</B></h>
+          <h1><B>CRICKET WINNERS(M)</B></h>
           <div class="podium">
             <div id="secondPlace" class="second-place podium-item">
               <span id="secondRank" class="rank">2</span>
               <div id="secondDepartment" class="department">
-                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+                <div id="secondDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal silver-medal"></div>
             </div>
             <div id="firstPlace" class="first-place podium-item">
               <span id="firstRank" class="rank">1</span>
               <div id="firstDepartment" class="department">
-                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+                <div id="firstDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal gold-medal"></div>
             </div>
             <div id="thirdPlace" class="third-place podium-item">
               <span id="thirdRank" class="rank">3</span>
               <div id="thirdDepartment" class="department">
-                <div id="thirdDept1" class="dept">MECH</div>
+                <div id="thirdDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal bronze-medal"></div>
             </div>

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %} alt="Left Logo" id="headerim1">
+        <img src="{% static 'myapp/images/Vishwakarma_Institute_of_Technology.png' %}" alt="Left Logo" id="headerim1">
         <div class="college-info">
             <div class="managing-society">Bansilal Ramnath Agarwal Charitable Trust's</div>
             <div class="college-name">Vishwakarma Institute Of Information Technology, Pune</div>
@@ -36,66 +36,74 @@
                     <li> 4.Refree's decision will be the final decision</li>
                     <li> 5.⁠⁠In case of  Relay batton will be given to each team which should to passed on to the respective teammates.</li>
                     <li> 6.⁠⁠If  the batton falls or is passed after the player has crossed the line , that team will be disqualified.</li>
-                   
                     <li>7.⁠ ⁠Sportsmanship: All players must demonstrate good sportsmanship, respect for referees, and fellow participants. </li>
                     <li> 8.⁠ ⁠Prohibited Conduct: Abusive language, inappropriate gestures, or any form of intimidation will not be tolerated.
                                    
             </ul>
         </div>
         <div class="login-form">
-            <h2>Student Registration</h2>
-            <div class="form-container">
-              <a href="{% url 'register' %}">
-                  <button type="button">REGISTER</button>
-              </a>
-          </div>
-        </div>
+          <h2>Student Login</h2>
+          <form action="{% url 'event5' %}" method="POST">
+            {% csrf_token %}
+              <div class="form-group">
+                  <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" id="password" name="password" required>
+              </div>
+              <div class="form-container">
+                  <button>Login</button>
+              </div>                
+          </form>
+      </div>
     </div>
     
-    <h1>ATHLETICS WINNERS (W)</B></h>
+    <h1>ATHLETICS WINNERS(W)</B></h>
         <div class="podium">
             <div id="secondPlace" class="second-place podium-item">
               <span id="secondRank" class="rank">2</span>
               <div id="secondDepartment" class="department">
-                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+                <div id="secondDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal silver-medal"></div>
             </div>
             <div id="firstPlace" class="first-place podium-item">
               <span id="firstRank" class="rank">1</span>
               <div id="firstDepartment" class="department">
-                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+                <div id="firstDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal gold-medal"></div>
             </div>
             <div id="thirdPlace" class="third-place podium-item">
               <span id="thirdRank" class="rank">3</span>  
               <div id="thirdDepartment" class="department">
-                <div id="thirdDept1" class="dept">MECH</div>
+                <div id="thirdDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal bronze-medal"></div>
             </div>
           </div>
-          <h1><B>ATHLETICS  WINNERS (M)</B></h>
+          <h1><B>ATHLETICS WINNERS(M)</B></h>
           <div class="podium">
             <div id="secondPlace" class="second-place podium-item">
               <span id="secondRank" class="rank">2</span>
               <div id="secondDepartment" class="department">
-                <div id="secondDept1" class="dept">CSE-AIML & CSE-IOT & CSE-SE</div>
+                <div id="secondDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal silver-medal"></div>
             </div>
             <div id="firstPlace" class="first-place podium-item">
               <span id="firstRank" class="rank">1</span>
               <div id="firstDepartment" class="department">
-                <div id="firstDept1" class="dept">CSE-AI & CSE-DS</div>
+                <div id="firstDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal gold-medal"></div>
             </div>
             <div id="thirdPlace" class="third-place podium-item">
               <span id="thirdRank" class="rank">3</span>
               <div id="thirdDepartment" class="department">
-                <div id="thirdDept1" class="dept">MECH</div>
+                <div id="thirdDept1" class="dept">TO BE ANNOUNCED SOON..</div>
               </div>
               <div class="medal bronze-medal"></div>
             </div>
@@ -133,7 +141,7 @@
     </div>
     <div class="dot"></div>
     <div class="dot"></div>
-    <div class="dot"><>/div>
+    <div class="dot"></div>
         
 
     </div>
